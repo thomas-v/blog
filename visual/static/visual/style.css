@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "Brand";
+    src: url("/static/visual/fonts/brand.ttf") format("woff2");
+}
+@font-face {
+    font-family: "Carousel";
+    src: url("/static/visual/fonts/carousel.ttf") format("woff2");
+}
+.navbar-brand {
+    font-family: "Brand", serif;
+}
+
+/* INTRO */
+#intro{
+    margin-top:50px;
+}
+#intro-title{
+    display:block;
+    font-size:30px;
+}
+#intro-detail{
+    display:block;
+    font-size:20px;
+}
+
+/* CAROUSEL */
+#carousel{
+    margin-top:50px;
+}
+.carousel-item {
+    width:100%;
+    height:300px;
+    background-color: gray;
+}
+.parent-carousel{
+    display: flex; /* contexte sur le parent */
+    align-items: center;
+    justify-content: center;
+    height:300px;
+    font-family: "Carousel", serif;
+    font-size:70px;
+}
+#icon-code {
+    width:200px;
+    height:200px;
+}
+#icon-pencil {
+    width:150px;
+    height:150px;
+}
