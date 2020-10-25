@@ -8,4 +8,11 @@ class Theme(models.Model):
     def __str__(self):
         return format(self.name)
 
-    
+class Tutorial(models.Model):
+    name = models.CharField(max_length=255)
+    content = models.TextField(null=True, blank=True) 
+    date = models.DateField(auto_now_add=True, blank=True)
+    theme = models.ForeignKey(Theme, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return format(self.name)
