@@ -29,3 +29,12 @@ def listTutorials(request, id):
     }
 
     return render(request, 'visual/list.html', context)
+
+def detailTutorial(request, id):
+
+    tutorial = Tutorial.objects.get(pk=id)
+    print(tutorial)
+    context = {
+        'tutorial':tutorial
+    }
+    return render(request, 'visual/detail.html', context)

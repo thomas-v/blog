@@ -10,7 +10,7 @@
     font-family: "Brand", serif;
 }
 
-#intro,#list{
+#intro,#list,#detail{
     margin-top:50px;
 }
 #intro-title,#list-title{
