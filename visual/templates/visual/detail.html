@@ -4,6 +4,20 @@
     <div class="row" id="detail">
         <div class="col">
             <h2 id="intro-title">{{tutorial.name}}</h2>
+            <div class="raw">
+                <div class="col-8">
+                    <pre><code class="python">
+def detailTutorial(request, id):
+
+    tutorial = Tutorial.objects.get(pk=id)
+    print(tutorial)
+    context = {
+        'tutorial':tutorial
+    }
+    return render(request, 'visual/detail.html', context)
+                    </code></pre>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}
