@@ -1,0 +1,19 @@
+{% extends 'visual/base.html' %}
+
+{% block content %}
+    <div class="row" id="list">
+        <div class="col">
+            <h2 id="intro-title">Tutoriels {{currentTheme.name}}</h2>
+                <ul class="list-group">
+                    {% for tutorial in tutorials %}
+                        <li class="list-group-item">
+                            <span id="list-tutorial-title"><a href="{% url 'detail-tutoriel' tutorial.id %}">{{tutorial.name}}</a></span>
+                            {% if tutorial.date|date:"Y-m-d" > week_ago|date:"Y-m-d" %}
+                                <span class="badge badge-primary">New</span>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+        </div>
+    </div>
+{% endblock %}

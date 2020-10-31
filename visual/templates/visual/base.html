@@ -1,15 +1,16 @@
 {% load static %}
 <html>
     <head>
-        <title>Totorimmo</title>
+        <title>Totorimma</title>
         <link rel="stylesheet" href="{% static 'visual/bootstrap/bootstrap.min.css' %}">
         <link rel="stylesheet" href="{% static 'visual/style.css' %}">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/styles/atom-one-dark.min.css">
     </head>
     <body>
         
         
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Totorimmo</a>
+    <a class="navbar-brand" href="{% url 'accueil' %}">Totorimma</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -17,14 +18,13 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-            <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{% url 'accueil' %}">Accueil <span class="sr-only">(current)</span></a>
         </li>
+        {% for theme in themes %}
         <li class="nav-item">
-          <a class="nav-link" href="#">Python <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="{% url 'tutoriels' theme.id %}">{{theme.name}} <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Go</a>
-        </li>
+        {% endfor %}
       </ul>
     </div>
   </nav>
@@ -35,5 +35,13 @@
         <script src="{% static 'visual/jquery/jquery-3.5.1.min.js' %}"></script>
         <script src="{% static 'visual/popper/popper.min.js' %}"></script>
         <script src="{% static 'visual/bootstrap/bootstrap.min.js' %}"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/highlight.min.js"></script>
+        <script>
+          document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+              hljs.highlightBlock(block);
+            });
+          });
+        </script>
   </body>
 </html>

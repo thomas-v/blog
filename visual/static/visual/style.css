@@ -10,14 +10,15 @@
     font-family: "Brand", serif;
 }
 
-/* INTRO */
-#intro{
+#intro,#list,#detail{
     margin-top:50px;
 }
-#intro-title{
+#intro-title,#list-title{
     display:block;
     font-size:30px;
 }
+
+/* INTRO */
 #intro-detail{
     display:block;
     font-size:20px;
@@ -47,4 +48,17 @@
 #icon-pencil {
     width:150px;
     height:150px;
+}
+
+/* list tutorials */
+.list-group{
+    margin-top:50px;
+}
+
+/* detail */
+#article{
+    margin-top:50px;
+}
+#article-title{
+    font-size:20px;   
 }
