@@ -1,5 +1,4 @@
 from django.db import models
-from ckeditor.fields import RichTextField
 
 # Create your models here.
 class Theme(models.Model):
@@ -11,7 +10,7 @@ class Theme(models.Model):
 
 class Tutorial(models.Model):
     name = models.CharField(max_length=255)
-    content = RichTextField(null=True, blank=True) 
+    content = models.TextField(null=True, blank=True) 
     date = models.DateField(auto_now_add=True, blank=True)
     theme = models.ForeignKey(Theme, on_delete=models.CASCADE)
 

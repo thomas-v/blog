@@ -54,3 +54,11 @@
 .list-group{
     margin-top:50px;
 }
+
+/* detail */
+#article{
+    margin-top:50px;
+}
+#article-title{
+    font-size:20px;   
+}
