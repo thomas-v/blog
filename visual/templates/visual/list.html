@@ -9,7 +9,7 @@
                         <li class="list-group-item">
                             <span id="list-tutorial-title"><a href="{% url 'detail-tutoriel' tutorial.id %}">{{tutorial.name}}</a></span>
                             {% if tutorial.date|date:"Y-m-d" > week_ago|date:"Y-m-d" %}
-                                <span class="badge badge-primary">New</span>
+                                <span class="badge badge-primary">Nouveau</span>
                             {% endif %}
                         </li>
                     {% endfor %}
