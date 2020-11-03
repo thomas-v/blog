@@ -18,6 +18,10 @@
     font-size:30px;
 }
 
+#home-detail{
+    margin-top:20px;
+}
+
 /* INTRO */
 #intro-detail{
     display:block;
