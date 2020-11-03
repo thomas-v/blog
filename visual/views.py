@@ -34,7 +34,6 @@ def detailTutorial(request, id):
 
     themes = Theme.objects.all()
     tutorial = Tutorial.objects.get(pk=id)
-    print(tutorial)
     context = {
         'themes':themes,
         'tutorial':tutorial

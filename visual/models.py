@@ -15,4 +15,4 @@ class Tutorial(models.Model):
     theme = models.ForeignKey(Theme, on_delete=models.CASCADE)
 
     def __str__(self):
-        return format(self.name)
+        return format(self.theme) + ' : ' + format(self.name)
